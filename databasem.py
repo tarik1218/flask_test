@@ -1,6 +1,6 @@
 import psycopg2
 
-db = psycopg2.connect(host = "finaldata.postgres.database.azure.com",dbname = "postgres",user = "TarikId1218",password = "Sanane1218*", sslmode="require" )
+db = psycopg2.connect(user = "TarikId1218", password = "Sanane1218*", host = "finaldata.postgres.database.azure.com",port="5432",database = "postgres")
 
 imlec = db.cursor()
 psycopg2.connect()
