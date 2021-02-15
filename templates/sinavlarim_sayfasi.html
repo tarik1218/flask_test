@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="/giris"><input type="submit" value="Geri Dön"/></a><br>
+    <strong>Sınava katılmak için linkine tıklayın</strong>
+    <br>
+    <form action="/ara" method="post">
+
+
+    <table style="width:100%">
+    <tr><th>Sınav Adı</th><th>Yayınlayan</th><th>Başlangıç Tarihi</th><th>Bitiş Tarihi</th><th>Linki</th></tr>
+        {% for item in rows %}
+            <tr><td>{{ item.sinav_adi }}</td><td>{{ item.yayinlayan }}</td><td>{{ item.baslangic_tarihi }}</td><td>{{ item.bitis_tarihi }}</td><td><input type="submit" name="link" value="{{ item.linki }}"/></td><!--<input type="submit" name="link" value="{{ item.linki }}" />--></tr>
+        {% endfor %}
+    </table>
+
+        </form>
+
+
+
+</body>
+</html>

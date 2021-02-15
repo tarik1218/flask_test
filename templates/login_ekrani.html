@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Tutorial</title>
+</head>
+<body>
+<h1>Sınav Portalı</h1>
+
+<form action="/giris" method="post"> <!-- action eklemen gerek bu hangi sayfaya çalışacak bu form onu gösteriyor !!!!!!!!!!!!!!!!!!!-->
+        <label for="kullanıcı_id">ID:</label><!-- labeller sadece yazı açıklama, for altındaki alan için olduğunu belirtir.-->
+        <input type="text" name="id" id="kullanıcı_id" required> <!-- input küçük yazma alanı, id sadece html içi -->
+        <br> <!-- <br> alt satıra geçme -->
+
+        <!-- name ler burada değişken adı. bunlar üzerinden veri alışverişi yapıcaksın, buraya erişeceksin, html dışı-->
+        <label for="kullanici_sifre">Şifre:</label>
+        <input type="text" name="sifre" id="kullanici_sifre" required>
+        <br>
+
+        <input type="submit" value="Giriş Yap">
+    </form>
+<!--<a href="/page_2"><input type="submit" value="Go to page 2"/></a>  kommentler bu şekilde yazılıyor htmlde-->
+
+</body>
+</html>

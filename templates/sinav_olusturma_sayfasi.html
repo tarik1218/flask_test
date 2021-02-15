@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Sınav oluşturma sayfası</h1>
+
+<form action="/sınav_olusturuldu" method="post">
+<strong>Sınav Adı:</strong><br>
+<input type="text" name="sinav_adi" id="sinav_adi" required><br><br>
+
+<strong>Başlangıç tarihi:</strong><br>
+<input type="text" name="baslangic_tarihi" id="baslangic_tarihi" required><br><br>
+
+<strong>Bitiş tarihi:</strong><br>
+<input type="text" name="bitis_tarihi" id="bitis_tarihi" required><br><br>
+
+<strong>Soru-1:</strong><br>
+<textarea type="text" name="soru_1" rows="15" cols="50" wrap="off" required></textarea><br>
+<strong>A):</strong><input style="width:30%" type="text" name="soru_1_a" id="soru_1_a" required><br>
+<strong>B):</strong><input style="width:30%" type="text" name="soru_1_b" id="soru_1_b" required><br>
+<strong>C):</strong><input style="width:30%" type="text" name="soru_1_c" id="soru_1_c" required><br>
+<strong>D):</strong><input style="width:30%" type="text" name="soru_1_d" id="soru_1_d" required><br>
+<strong>E):</strong><input style="width:30%" type="text" name="soru_1_e" id="soru_1_e" required><br>
+
+<br>
+<strong>Soru-2:</strong><br>
+<textarea type="text" name="soru_2" rows="15" cols="50" wrap="off" required></textarea><br>
+<strong>A):</strong><input style="width:30%" type="text" name="soru_2_a" id="soru_2_a" required><br>
+<strong>B):</strong><input style="width:30%" type="text" name="soru_2_b" id="soru_2_b" required><br>
+<strong>C):</strong><input style="width:30%" type="text" name="soru_2_c" id="soru_2_c" required><br>
+<strong>D):</strong><input style="width:30%" type="text" name="soru_2_d" id="soru_2_d" required><br>
+<strong>E):</strong><input style="width:30%" type="text" name="soru_2_e" id="soru_2_e" required><br>
+
+<br>
+<strong>Soru-3:</strong><br>
+<textarea type="text" name="soru_3" rows="15" cols="50" wrap="off" required></textarea><br>
+<strong>A):</strong><input style="width:30%" type="text" name="soru_3_a" id="soru_3_a" required><br>
+<strong>B):</strong><input style="width:30%" type="text" name="soru_3_b" id="soru_3_b" required><br>
+<strong>C):</strong><input style="width:30%" type="text" name="soru_3_c" id="soru_3_c" required><br>
+<strong>D):</strong><input style="width:30%" type="text" name="soru_3_d" id="soru_3_d" required><br>
+<strong>E):</strong><input style="width:30%" type="text" name="soru_3_e" id="soru_3_e" required><br>
+
+<br>
+<input type="submit" value="Sınavı Yayınla"/>
+    </form>
+
+<a href="/giris"><input type="submit" value="Geri Dön"/></a>
+
+</body>
+</html>
