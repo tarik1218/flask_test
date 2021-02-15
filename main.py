@@ -1,7 +1,5 @@
-﻿# encoding=utf8
-import sys
-reload(sys)
-sys.setdefaultencoding('utf8')
+﻿#!/usr/bin/env python
+# -*- coding: latin-1 -*-
 from databasem import db, imlec
 from random_link_generator import *
 
