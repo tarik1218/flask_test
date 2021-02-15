@@ -43,7 +43,7 @@ def sinavlar_tablosu_olustur():
     komut = """ CREATE TABLE Sinavlar(
                             url TEXT PRIMARY KEY,
                             sinav_adi TEXT NOT NULL,
-                            ogretmen_id INTEGER NOT NULL,
+                            ogretmen_id TEXT NOT NULL,
                             baslangic_tarihi TEXT NOT NULL,
                             bitis_tarihi TEXT NOT NULL,
                             
@@ -183,3 +183,7 @@ def kullanici_getir(id):
 #kullanıcılar_tablosu_olustur()
 #sinavlar_tablosu_olustur()
 #kullanıcı_ekle()
+
+def tablo_sil():
+    komut="DROP TABLE Sinavlar;"
+    imlec.execute(komut)
