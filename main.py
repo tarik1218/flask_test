@@ -1,4 +1,4 @@
-﻿
+﻿# -*- coding: utf-8 -*-
 from databasem import db, imlec
 from random_link_generator import *
 
