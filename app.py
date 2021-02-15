@@ -1,6 +1,4 @@
-﻿# encoding=utf8
-import sys
-sys.setdefaultencoding('utf8')
+﻿
 import config
 import psycopg2
 from classlar import *

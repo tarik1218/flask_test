@@ -1,7 +1,4 @@
-﻿# encoding=utf8
-import sys
-
-sys.setdefaultencoding('utf8')
+﻿
 from databasem import db, imlec
 from random_link_generator import *
 
