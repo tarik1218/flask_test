@@ -8,7 +8,7 @@ from random_link_generator import *
 
 def kullanıcı_ekle():
     #Öğretmen_1
-    komut="INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('123456','hocasifre','Yar. Doc. Fahri Özkurt', 'True');"
+    komut="INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('123456','hocasifre','Yar. Doc. Fahri Ozkurt', 'True');"
     imlec.execute(str(komut))
     db.commit()
 
