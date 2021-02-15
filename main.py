@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+﻿
 from databasem import db, imlec
 from random_link_generator import *
 
@@ -8,27 +8,27 @@ from random_link_generator import *
 
 def kullanıcı_ekle():
     #Öğretmen_1
-    komut="""INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('123456','hocasifre','Yar. Doc. Fahri Özkurt', 'True');"""
+    komut="INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('123456','hocasifre','Yar. Doc. Fahri Özkurt', 'True');"
     imlec.execute(komut)
     db.commit()
 
     #Öğretmen_2
-    komut = """INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('654321','hocasifre','Asistan Şahin Kaynakçı', 'True');"""
+    komut = "INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('654321','hocasifre','Asistan Şahin Kaynakçı', 'True');"
     imlec.execute(komut)
     db.commit()
 
     #Öğrenci_1
-    komut = """INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('987654','ogrsifre','Oğuzhan Görmüş', 'False');"""
+    komut = "INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('987654','ogrsifre','Oğuzhan Görmüş', 'False');"
     imlec.execute(komut)
     db.commit()
 
     # Öğrenci_2
-    komut = """INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('456789','ogrsifre','Şehmuz Kovucu', 'False');"""
+    komut = "INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('456789','ogrsifre','Şehmuz Kovucu', 'False');"
     imlec.execute(komut)
     db.commit()
 
     # Öğrenci_3
-    komut = """INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('555555','ogrsifre','Süleyman Karabahtlı', 'False');"""
+    komut = "INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('555555','ogrsifre','Süleyman Karabahtlı', 'False');"
     imlec.execute(komut)
     db.commit()
 
