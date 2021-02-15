@@ -1,4 +1,4 @@
-from databasem import db, imlec
+﻿from databasem import db, imlec
 from random_link_generator import *
 
 
@@ -7,27 +7,27 @@ from random_link_generator import *
 
 def kullanıcı_ekle():
     #Öğretmen_1
-    komut="""INSERT INTO Kullanıcılar(id,sifre,ad_soyad,ogretmen_mi) VALUES('123456','hocasifre','Yar. Doç. Fahri Özkurt', 'True');"""
+    komut="""INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('123456','hocasifre','Yar. Doç. Fahri Özkurt', 'True');"""
     imlec.execute(komut)
     db.commit()
 
     #Öğretmen_2
-    komut = """INSERT INTO Kullanıcılar(id,sifre,ad_soyad,ogretmen_mi) VALUES('654321','hocasifre','Asistan Şahin Kaynakçı', 'True');"""
+    komut = """INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('654321','hocasifre','Asistan Şahin Kaynakçı', 'True');"""
     imlec.execute(komut)
     db.commit()
 
     #Öğrenci_1
-    komut = """INSERT INTO Kullanıcılar(id,sifre,ad_soyad,ogretmen_mi) VALUES('987654','ogrsifre','Oğuzhan Görmüş', 'False');"""
+    komut = """INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('987654','ogrsifre','Oğuzhan Görmüş', 'False');"""
     imlec.execute(komut)
     db.commit()
 
     # Öğrenci_2
-    komut = """INSERT INTO Kullanıcılar(id,sifre,ad_soyad,ogretmen_mi) VALUES('456789','ogrsifre','Şehmuz Kovucu', 'False');"""
+    komut = """INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('456789','ogrsifre','Şehmuz Kovucu', 'False');"""
     imlec.execute(komut)
     db.commit()
 
     # Öğrenci_3
-    komut = """INSERT INTO Kullanıcılar(id,sifre,ad_soyad,ogretmen_mi) VALUES('555555','ogrsifre','Süleyman Karabahtlı', 'False');"""
+    komut = """INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES('555555','ogrsifre','Süleyman Karabahtlı', 'False');"""
     imlec.execute(komut)
     db.commit()
 
@@ -40,7 +40,7 @@ def kullanıcı_ekle():
 #---------------------------------SINAVLA İLGİLİ İŞLEMLER----------------------------------
 
 def sinavlar_tablosu_olustur():
-    komut = """ CREATE TABLE Sınavlar(
+    komut = """ CREATE TABLE Sinavlar(
                             url TEXT PRIMARY KEY,
                             sinav_adi TEXT NOT NULL,
                             ogretmen_id INTEGER NOT NULL,
@@ -105,7 +105,7 @@ def sinav_ekle(sinav_adi, ogretmen_id, baslangic_tarihi, bitis_tarihi, soru_1, s
     soru_3_d = "'" + str(soru_3_d) + "'"
     soru_3_e = "'" + str(soru_3_e) + "'"
 
-    komut = "INSERT INTO Sınavlar(url,sinav_adi,ogretmen_id,baslangic_tarihi,bitis_tarihi,soru_1,soru_1_a,soru_1_b,soru_1_c,soru_1_d,soru_1_e,soru_2,soru_2_a,soru_2_b,soru_2_c,soru_2_d,soru_2_e,soru_3,soru_3_a,soru_3_b,soru_3_c,soru_3_d,soru_3_e) VALUES(" + url + "," + sinav_adi + "," + ogretmen_id + "," + baslangic_tarihi + "," + bitis_tarihi + "," + soru_1 + "," + soru_1_a + "," + soru_1_b + "," + soru_1_c + "," + soru_1_d + "," + soru_1_e + "," + soru_2 + ","+ soru_2_a + "," + soru_2_b + "," + soru_2_c + "," + soru_2_d + "," + soru_2_e + "," + soru_3 + "," + soru_3_a + "," + soru_3_b + "," + soru_3_c + "," + soru_3_d + "," + soru_3_e + ");"
+    komut = "INSERT INTO Sinavlar(url,sinav_adi,ogretmen_id,baslangic_tarihi,bitis_tarihi,soru_1,soru_1_a,soru_1_b,soru_1_c,soru_1_d,soru_1_e,soru_2,soru_2_a,soru_2_b,soru_2_c,soru_2_d,soru_2_e,soru_3,soru_3_a,soru_3_b,soru_3_c,soru_3_d,soru_3_e) VALUES(" + url + "," + sinav_adi + "," + ogretmen_id + "," + baslangic_tarihi + "," + bitis_tarihi + "," + soru_1 + "," + soru_1_a + "," + soru_1_b + "," + soru_1_c + "," + soru_1_d + "," + soru_1_e + "," + soru_2 + ","+ soru_2_a + "," + soru_2_b + "," + soru_2_c + "," + soru_2_d + "," + soru_2_e + "," + soru_3 + "," + soru_3_a + "," + soru_3_b + "," + soru_3_c + "," + soru_3_d + "," + soru_3_e + ");"
     imlec.execute(komut)
     db.commit()
 
@@ -113,7 +113,7 @@ def sinav_ekle(sinav_adi, ogretmen_id, baslangic_tarihi, bitis_tarihi, soru_1, s
 def sinav_getir(url):
     url = "'" + str(url) + "'"
 
-    komut = "SELECT * FROM Sınavlar WHERE url=" + url + ";"
+    komut = "SELECT * FROM Sinavlar WHERE url=" + url + ";"
     imlec.execute(komut)
     sinav = imlec.fetchall()
     return sinav[0]  # sınavı satır olarak getirir tüm nitelikleri ile
@@ -122,14 +122,14 @@ def sinav_getir(url):
 def sinavi_olusturanin_adini_getir(olusturan_id):
     olusturan_id = "'" + str(olusturan_id) + "'"
 
-    komut = "SELECT ad_soyad FROM Kullanıcılar WHERE id=" + olusturan_id + ";"
+    komut = "SELECT ad_soyad FROM Kullanicilar WHERE id=" + olusturan_id + ";"
     imlec.execute(komut)
     gelen_veri = imlec.fetchall()[0][0]
     return gelen_veri
 
 #üstteki fonksiyon alttaki fonksiyon içindir.
 def sinavları_listele():
-    komut = "SELECT * FROM Sınavlar;"
+    komut = "SELECT * FROM Sinavlar;"
     imlec.execute(komut)
     rows = imlec.fetchall()
     for row in rows:
@@ -142,7 +142,7 @@ def sinavları_listele():
 
 
 def kullanıcılar_tablosu_olustur():
-    komut = """ CREATE TABLE Kullanıcılar(
+    komut = """ CREATE TABLE Kullanicilar(
                     id TEXT PRIMARY KEY,
                     sifre TEXT NOT NULL,
                     ad_soyad TEXT NOT NULL,
@@ -158,21 +158,21 @@ def kullanici_ekle(id,sifre,ad_soyad,ogretmen_mi):
     ad_soyad = "'" + str(ad_soyad) + "'"
     ogretmen_mi = "'" + str(ogretmen_mi) + "'"
 
-    komut = "INSERT INTO Kullanıcılar(id,sifre,ad_soyad,ogretmen_mi) VALUES("+id+","+sifre+","+ad_soyad+", "+ogretmen_mi+");"
+    komut = "INSERT INTO Kullanicilar(id,sifre,ad_soyad,ogretmen_mi) VALUES("+id+","+sifre+","+ad_soyad+", "+ogretmen_mi+");"
     imlec.execute(komut)
     db.commit()
 
 def kullanıcı_sil(id):
     id="'"+str(id)+"'"
 
-    komut="DELETE FROM Kullanıcılar WHERE id="+id+";"
+    komut="DELETE FROM Kullanicilar WHERE id="+id+";"
     imlec.execute(komut)
     db.commit()
 
 def kullanici_getir(id):
     id="'"+str(id)+"'"
 
-    komut = "SELECT * FROM Kullanıcılar WHERE id=" + id + ";"
+    komut = "SELECT * FROM Kullanicilar WHERE id=" + id + ";"
     imlec.execute(komut)
     kullanıcı = imlec.fetchall()
     if len(kullanıcı)==0:#kullanıcı sorgusu boş geldi ise
