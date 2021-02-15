@@ -185,5 +185,5 @@ def kullanici_getir(id):
 #kullanıcı_ekle()
 
 def tablo_sil():
-    komut="DROP TABLE Sinavlar;"
+    komut="DROP TABLE IF EXISTS Sinavlar;"
     imlec.execute(komut)
