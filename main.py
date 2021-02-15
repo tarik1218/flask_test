@@ -184,6 +184,9 @@ def kullanici_getir(id):
 #sinavlar_tablosu_olustur()
 #kullanıcı_ekle()
 
+
+#Bu fonksiyon programı test ederken deploy ettikten sonra sınav tablosunu sıfırlamak için yazıldı.
+#Silmedim belki sunarken lazım olur diye
 def tablo_sil():
     komut="DROP TABLE IF EXISTS Sinavlar;"
     imlec.execute(komut)
