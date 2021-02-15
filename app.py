@@ -1,5 +1,5 @@
 ﻿
-import config
+
 import psycopg2
 from classlar import *
 from main import *
